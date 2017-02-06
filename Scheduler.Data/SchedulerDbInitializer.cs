@@ -13,6 +13,8 @@ namespace Scheduler.Data
         {
             context = (SchedulerContext)serviceProvider.GetService(typeof(SchedulerContext));
 
+            context.Database.EnsureCreated();
+
             InitializeSchedules();
         }
 
